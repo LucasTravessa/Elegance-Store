@@ -3,7 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from'./header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook,faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook,faWhatsapp, faInstagram, } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 
 const Navbarr = () => {
@@ -26,13 +27,14 @@ const Navbarr = () => {
     }, [prevScrollPos]);
   
     return (
-      <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`}>
+      <div>
+      <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`} >
         <Navbar expand='lg' className= 'bgTherd' >
             <Container>
                 <Nav>
                     <Nav.Link className={styles.nav}>Home</Nav.Link>
                     <Nav.Link className={styles.nav}>Fotos</Nav.Link>
-                    <Nav.Link className={styles.nav}>Informations</Nav.Link>
+                    <Nav.Link className={styles.nav}>Informations</Nav.Link>                    
                 </Nav>
                 <Navbar.Brand 
                 href="#home"
@@ -41,19 +43,23 @@ const Navbarr = () => {
                     Elegance
                 </Navbar.Brand>
                 <Nav>
-                    <Nav.Link>
+                    <Nav.Link className={styles.img}>
                         <FontAwesomeIcon icon={faInstagram} size='xl' style={{color:'white', paddingRight:'15px'}}></FontAwesomeIcon>
                     </Nav.Link>
-                    <Nav.Link>
+                    <Nav.Link className={styles.img}>
                         <FontAwesomeIcon icon={faFacebook} size='xl' style={{color:'white', paddingRight:'15px'}}></FontAwesomeIcon>
                     </Nav.Link>
-                    <Nav.Link>
+                    <Nav.Link className={styles.img}>
                         <FontAwesomeIcon icon={faWhatsapp} size='xl' style={{color:'white'}}></FontAwesomeIcon>
+                    </Nav.Link>
+                    <Nav.Link className={styles.button}>
+                        <FontAwesomeIcon icon={faBars} size='xl'></FontAwesomeIcon>
                     </Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
-      </nav>
+      </nav> 
+      </div>
     );
   };  
 

@@ -17,3 +17,23 @@
 .nav {
   color: white;
 }
+
+.button {
+  display: none;
+  color: white;
+}
+
+@media(max-width: 800px) {
+  .nav {
+    display: none;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .button {
+    display: inline;
+    color: white;
+  }
+}
