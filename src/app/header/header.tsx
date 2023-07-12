@@ -30,9 +30,9 @@ const Navbarr = () => {
         <Navbar expand='lg' className= 'bgTherd' >
             <Container>
                 <Nav>
-                    <Nav.Link style={{ color: 'white' }}>Home</Nav.Link>
-                    <Nav.Link style={{ color: 'white' }}>Fotos</Nav.Link>
-                    <Nav.Link style={{ color: 'white' }}>Informations</Nav.Link>
+                    <Nav.Link className={styles.nav}>Home</Nav.Link>
+                    <Nav.Link className={styles.nav}>Fotos</Nav.Link>
+                    <Nav.Link className={styles.nav}>Informations</Nav.Link>
                 </Nav>
                 <Navbar.Brand 
                 href="#home"

@@ -13,3 +13,7 @@
   .hidden {
     transform: translateY(-100%);
   }
+  
+.nav {
+  color: white;
+}
