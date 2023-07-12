@@ -1,18 +1,33 @@
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { GoogleMap, Marker, useLoadScript, InfoWindow } from '@react-google-maps/api';
 
-export default function Map() {
+const Map: React.FC = () => {
+  const center = { lat: -22.523965275093655, lng: -41.939493840902806 }; // Coordenadas da localização da loja , -, 
+  const zoom = 15; // Nível de zoom do mapa
+
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY, // Sua chave de API do Google Maps
+  });
+
+  if (loadError) {
+    return <div>Error loading map</div>;
+  }
+
+  if (!isLoaded) {
+    return <div>Loading map...</div>;
+  }
+
   return (
-      <Row className='w-100 d-flex justify-content-center'>
-      <Col lg='6' className='my-4'>
-        <iframe
-          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115681.29592731265!2d-77.47713270775661!3d25.0326996781907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x892f7c99b981dbc9%3A0x2aef01d3485e50d2!2sNassau%2C%20Bahamy!5e0!3m2!1spl!2spl!4v1624445118063!5m2!1spl!2spl'
-          className='w-100'
-          height='400'
-          loading='lazy'
-        ></iframe>
-      </Col>
-    </Row>
+    <GoogleMap
+      mapContainerStyle={{ width: '60%', height: '400px' }}
+      center={center}
+      zoom={zoom}
+    >
+      <Marker position={center} title="Localização da loja" animation={google.maps.Animation.DROP}/> {/* Marcador na localização da loja */}
+    
+    {/* Fazer infowindow */}
+    
+    </GoogleMap>
   );
-}
+};
 
+export default Map;
