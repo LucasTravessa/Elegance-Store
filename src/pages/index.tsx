@@ -11,7 +11,7 @@ export default function Main() {
   return (
     <>
       <Header />
-      <Headermob/>
+      {/* <Headermob/> */}
       <Home />
       <Fotos />
       <Info />
