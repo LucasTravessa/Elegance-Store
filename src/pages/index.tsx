@@ -4,14 +4,12 @@ import Home from '@/app/home/home';
 import Fotos from '@/app/fotos/fotos';
 import Footer from '@/app/footer/footer';
 import Info from '@/app/information/information';
-import Headermob from '@/app/headermob/headermob';
 
 
 export default function Main() {
   return (
     <>
       <Header />
-      {/* <Headermob/> */}
       <Home />
       <Fotos />
       <Info />

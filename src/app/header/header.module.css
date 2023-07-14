@@ -19,15 +19,29 @@
 }
 
 .nav_visible, .nav_hidden {
-  margin-top: 45px;
+  margin-top: 0px;
+}
+
+#nav2 {
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .nav_visible {
-  display: inline;
+  transform: translateX(0%);
 }
 
 .nav_hidden {
+  transform: translateX(-100%);
+}
+
+.nav_hidden2 {
   display: none;
+}
+
+.teste {
+  width: 400px;
 }
 
 .sociais_media_icons {
@@ -41,6 +55,12 @@
 .button {
   display: none;
   color: white;
+}
+
+@media(max-width: 400px) {
+  .teste {
+    width: 200px;
+  }
 }
 
 @media(max-width: 768px) {

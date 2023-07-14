@@ -10,8 +10,9 @@ import { useState, useEffect } from 'react';
 const Navbarr = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
-    const [status, setStatus] = useState(true);
-
+    const [status, setStatus] = useState(false);
+    const [screenWidth, setScreenWidth] = useState(0);
+     
     useEffect(() => {
       const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
@@ -19,17 +20,29 @@ const Navbarr = () => {
         setVisible(prevScrollPos > currentScrollPos);
         setPrevScrollPos(currentScrollPos);
       };
-  
+
+      const handleResize = () => {
+        setScreenWidth(window.innerWidth);
+      };
+
       window.addEventListener('scroll', handleScroll);
-  
+      window.addEventListener('resize', handleResize);
+
       return () => {
         window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', handleResize);
       };
     }, [prevScrollPos]);
 
     const handleClick = () => {
       setStatus(!status);
     }
+
+    useEffect(() => {
+      if (screenWidth > 992) {
+        setStatus(false);
+      }
+    }, [screenWidth]);
 
     return (
       <div>
@@ -68,9 +81,10 @@ const Navbarr = () => {
           </Navbar>
 
           {/* Submenu */}
-          <nav className={`${status ? styles.nav_visible : styles.nav_hidden}`}>
+          <div className={`${screenWidth <= 992 ? styles.nav_visible : styles.nav_hidden2}`}>
+          <nav className={`${status ? styles.nav_visible : styles.nav_hidden}`} id={styles.nav2}>
             <Navbar id='headermob' style={{ flexDirection: 'column' }} expand='lg' className='bgTherd'>
-              <Container style={{ flexDirection: 'column' }}>
+              <Container style={{ flexDirection: 'column' }} className={styles.teste}>
                   <Nav style={{ flexDirection: 'column' }}>
                       <Nav.Link className={styles.text}>Home</Nav.Link>
                       <Nav.Link className={styles.text}>Fotos</Nav.Link>
@@ -91,6 +105,7 @@ const Navbarr = () => {
               </Container>
             </Navbar>
           </nav>
+          </div>
         </nav> 
       </div>
     );
