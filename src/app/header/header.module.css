@@ -26,6 +26,7 @@
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: row-reverse;
+  opacity: 0.9;
 }
 
 .nav_visible {
@@ -40,8 +41,8 @@
   display: none;
 }
 
-.teste {
-  width: 400px;
+.container {
+  width: 30vw;
 }
 
 .sociais_media_icons {
@@ -52,29 +53,18 @@
   color: white;
 }
 
+.card {
+  display: none;
+}
+
 .button {
   display: none;
   color: white;
 }
 
 @media(max-width: 400px) {
-  .teste {
+  .container {
     width: 200px;
-  }
-}
-
-@media(max-width: 768px) {
-  .nav {
-    display: none;
-  }
-
-  .img {
-    display: none;
-  }
-
-  .button {
-    display: inline;
-    color: white;
   }
 }
 
@@ -87,7 +77,15 @@
     display: none;
   }
 
-  .button {
+  .card {
     display: inline;
+    background-color: #5B5B5B;
+    border-color: white;
+    width: 40px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
   }
 }

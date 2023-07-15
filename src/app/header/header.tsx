@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Card from "react-bootstrap/Card";
 import styles from'./header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook,faWhatsapp, faInstagram, } from '@fortawesome/free-brands-svg-icons';
@@ -73,9 +74,11 @@ const Navbarr = () => {
                           <FontAwesomeIcon icon={faWhatsapp} size='xl' style={{color:'white'}}></FontAwesomeIcon>
                       </Nav.Link>
 
+                      <Card className={styles.card}>
                       <Nav.Link className={styles.button}>
                         <FontAwesomeIcon onClick={handleClick} icon={faBars} size='xl'></FontAwesomeIcon>
                       </Nav.Link>
+                      </Card>
                   </Nav>
               </Container>
           </Navbar>
@@ -83,8 +86,8 @@ const Navbarr = () => {
           {/* Submenu */}
           <div className={`${screenWidth <= 992 ? styles.nav_visible : styles.nav_hidden2}`}>
           <nav className={`${status ? styles.nav_visible : styles.nav_hidden}`} id={styles.nav2}>
-            <Navbar id='headermob' style={{ flexDirection: 'column' }} expand='lg' className='bgTherd'>
-              <Container style={{ flexDirection: 'column' }} className={styles.teste}>
+            <Navbar style={{ flexDirection: 'column' }} expand='lg' className='bgTherd'>
+              <Container style={{ flexDirection: 'column' }} className={styles.container}>
                   <Nav style={{ flexDirection: 'column' }}>
                       <Nav.Link className={styles.text}>Home</Nav.Link>
                       <Nav.Link className={styles.text}>Fotos</Nav.Link>
