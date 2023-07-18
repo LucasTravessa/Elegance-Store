@@ -1,5 +1,5 @@
 #footer {
-    height: 200px;
+    height: 220px;
 }
 
 .cards{
@@ -14,11 +14,17 @@
     width: 25%;
     color: white;
     font-size: 12px;
+    margin-top: 10px;
 }
 
 .title {
     font-size: 18px;
-    color: white;
+    color: white; 
+}
+
+#title {
+    font-size: 18px;
+    color: white; 
 }
 
 .footermob {
@@ -57,17 +63,13 @@
     transition: 0,5s;
 }
 
-.titlemob:hover {
-    transform: scale(1.02);
-}
-
 .footer_visible {
-    transform: translateY(0);
+    transform: translateX(0);
     display: inline;
 }
 
 .footer_hidden {
-    transform: translateY(100%);
+    transform: translateX(100%);
     display: none;
 }
 
