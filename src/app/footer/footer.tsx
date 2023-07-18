@@ -27,7 +27,7 @@ export default function Footer() {
     }
 
     return (
-            <div className="text-center p-1 bgTherd" id={styles.footer}>
+            <div className="z-1 text-center p-1 bgTherd" id={styles.footer}>
                 <div className={styles.cards}>
 
                     <Card className={styles.card}>
@@ -53,17 +53,18 @@ export default function Footer() {
 
                 </div>               
                 
-                <div className={styles.footermob}>
+                {/* footermob */}
+                <div className={styles.footermob} style={{zIndex: '1'}}>
 
                     <Card className={styles.cardmob}>
 
-                        <button className={styles.titlemob} onClick={handleClick1}>
+                        <button className={styles.titlemob} onClick={handleClick1} style={{zIndex: '1'}}>
                             Elegance Rommanel
                             <FontAwesomeIcon className={styles.icon} icon={faChevronDown} size='xl' style={{color:'white'}}></FontAwesomeIcon>
                         </button>
 
                     </Card>
-                    <Card id={styles.cardbutton} className={`${status1 ? styles.footer_visible : styles.footer_hidden}`}>
+                    <Card id={styles.cardbutton} className={`${status1 ? styles.footer_visible : styles.footer_hidden}`} style={{zIndex: '0'}}>
                         <p >Rod.Amaral Peixoto, 5223</p> 
                         <p >Centro </p> 
                         <p >Rio das Ostras - RJ, 28890-000</p> 
@@ -71,44 +72,44 @@ export default function Footer() {
 
                     <Card className={styles.cardmob}>
 
-                        <button className={styles.titlemob} onClick={handleClick2}>
+                        <button className={styles.titlemob} onClick={handleClick2} style={{zIndex: '1'}}>
                             Telefone
                             <FontAwesomeIcon className={styles.icon} icon={faChevronDown} size='xl' style={{color:'white'}}></FontAwesomeIcon>
                         </button>
 
                     </Card>
-                    <Card id={styles.cardbutton} className={`${status2 ? styles.footer_visible : styles.footer_hidden}`}>
+                    <Card id={styles.cardbutton} className={`${status2 ? styles.footer_visible : styles.footer_hidden}`} style={{zIndex: '0'}}>
                         <p>(22)998313480</p>
                     </Card>
 
                     <Card className={styles.cardmob}>
 
-                        <button className={styles.titlemob} onClick={handleClick3}>
+                        <button className={styles.titlemob} onClick={handleClick3} style={{zIndex: '1'}}>
                             Instagram
                             <FontAwesomeIcon className={styles.icon} icon={faChevronDown} size='xl' style={{color:'white'}}></FontAwesomeIcon>
                         </button>
 
                     </Card>
-                    <Card id={styles.cardbutton} className={`${status3 ? styles.footer_visible : styles.footer_hidden}`}>
+                    <Card id={styles.cardbutton} className={`${status3 ? styles.footer_visible : styles.footer_hidden}`} style={{zIndex: '0'}}>
                         <p>@elegance.rommanel</p>
                     </Card>
 
                     <Card className={styles.cardmob}>
 
-                        <button className={styles.titlemob} onClick={handleClick4}>
-                            Funcionamento:
+                        <button className={styles.titlemob} onClick={handleClick4} style={{zIndex: '1'}}>
+                            Funcionamento
                             <FontAwesomeIcon className={styles.icon} icon={faChevronDown} size='xl' style={{color:'white'}}></FontAwesomeIcon>
                         </button>
 
                     </Card>
-                    <Card id={styles.cardbutton} className={`${status4 ? styles.footer_visible : styles.footer_hidden}`}>
+                    <Card id={styles.cardbutton} className={`${status4 ? styles.footer_visible : styles.footer_hidden}`} style={{zIndex: '0'}}>
                         <p>Segunda a sexta: 9:30 as 18:00</p>
                         <p>Sábado: 9:30 as 16:00</p>
                         <p>Domingo: Fechado</p>
                     </Card>
                 </div>
 
-                <p className='mt-3' style={{ color: "white" }} id={styles.text}>
+                <p className='mt-3' style={{ color: "white"}} id={styles.text}>
                     © Copyright 2023 Elegance - All Rights Reserved
                 </p>
             </div>

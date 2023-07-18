@@ -45,7 +45,7 @@ const Navbarr = () => {
     }
   }, [screenWidth]);
 
-  return (
+  return (                
     <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`} >
       <Navbar style={{ zIndex: '1' }} expand='lg' className='bgTherd' >
         <Container>

@@ -27,7 +27,6 @@
 
 .cardmob {
     background-color: #5B5B5B;
-    /* border-color: white; */
     border: none;
     width: 100%;
     color: white;
@@ -36,15 +35,16 @@
 
 #cardbutton {
     background-color: #5B5B5B;
-    /* border-color: white; */
     border: none;
     width: 100%;
     color: white;
     font-size: 14px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .titlemob {
     background-color: #5B5B5B;
+    width: 98%;
     border: none;
     border-radius: 5px;
     border-color: white;
@@ -54,13 +54,20 @@
     flex-direction: row;
     justify-content: space-between;
     padding-left: 25px;
+    transition: 0,5s;
+}
+
+.titlemob:hover {
+    transform: scale(1.02);
 }
 
 .footer_visible {
+    transform: translateY(0);
     display: inline;
 }
 
 .footer_hidden {
+    transform: translateY(100%);
     display: none;
 }
 
