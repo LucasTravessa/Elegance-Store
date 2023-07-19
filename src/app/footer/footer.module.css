@@ -47,7 +47,15 @@
     color: white;
     font-size: 12px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cardmob_iconsindividual {
+    border: none;
+    display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 #cardbutton {

@@ -39,8 +39,7 @@ export default function Footer() {
                         <Card className={styles.cardmob}>
 
                             <h1 className='fs-6'>Elegance Rommanel</h1>
-                            <p >Rod.Amaral Peixoto, 5223</p> 
-                            <p >Centro </p> 
+                            <p >Rod.Amaral Peixoto, 5223, Centro</p> 
                             <p >Rio das Ostras - RJ, 28890-000</p> 
 
                         </Card>
@@ -56,12 +55,14 @@ export default function Footer() {
                     </div>
 
                     <Card className={styles.cardmob_icons}>
-                        <div className={styles.cardmob_icons}>
+                        <div className={styles.cardmob_iconsindividual}>
                             <FontAwesomeIcon className={styles.icon} icon={faWhatsapp} size='xl' style={{color:'white'}}></FontAwesomeIcon>
-                            <p>-(22)998313480</p>
+                            <p className='px-1'>(22)998313480</p>
                         </div>
+                        <div className={styles.cardmob_iconsindividual}>
                         <FontAwesomeIcon className={styles.icon} icon={faInstagram} size='xl' style={{color:'white'}}></FontAwesomeIcon>
-                        <p>@elegance.rommanel</p>
+                        <p className='px-1'>@elegance.rommanel</p>
+                        </div>
                        
                     </Card>
                     
