@@ -36,7 +36,18 @@
     border: none;
     width: 100%;
     color: white;
-    font-size: 20px;
+    font-size: 12px;
+    display: inline;
+}
+
+.cardmob_icons {
+    background-color: #5B5B5B;
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
 }
 
 #cardbutton {
