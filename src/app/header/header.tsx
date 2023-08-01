@@ -8,7 +8,8 @@ import { faFacebook, faWhatsapp, faInstagram, } from '@fortawesome/free-brands-s
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 
-const Navbarr = () => {
+export default function Header(props: any) {
+
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [status, setStatus] = useState(false);
@@ -45,14 +46,23 @@ const Navbarr = () => {
     }
   }, [screenWidth]);
 
-  return (                
+  
+  // smooth scrool
+  const scrollDown = (ref:any) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
+
+  return (
     <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`} >
       <Navbar style={{ zIndex: '1' }} expand='lg' className='bgTherd' >
         <Container>
           <Nav>
-            <Nav.Link className={styles.nav}>Home</Nav.Link>
-            <Nav.Link className={styles.nav}>Fotos</Nav.Link>
-            <Nav.Link className={styles.nav}>Informations</Nav.Link>
+            <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.home)}>Início</Nav.Link>
+            <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.fotos)}>Fotos</Nav.Link>
+            <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.info)}>Informações</Nav.Link>
           </Nav>
           <Navbar.Brand
             href="#home"
@@ -61,15 +71,15 @@ const Navbarr = () => {
             Elegance
           </Navbar.Brand>
           <Nav>
-            <Nav.Link className={styles.img}>
+            <Nav.Link className={styles.img} href='https://www.instagram.com/elegance.rommanel/'>
               <FontAwesomeIcon icon={faInstagram} size='xl' style={{ color: 'white', paddingRight: '15px' }}></FontAwesomeIcon>
             </Nav.Link>
 
-            <Nav.Link className={styles.img}>
+            <Nav.Link className={styles.img} href='https://www.facebook.com/elegancerommaneleprata/'>
               <FontAwesomeIcon icon={faFacebook} size='xl' style={{ color: 'white', paddingRight: '15px' }}></FontAwesomeIcon>
             </Nav.Link>
 
-            <Nav.Link className={styles.img}>
+            <Nav.Link className={styles.img} href='https://api.whatsapp.com/send?phone=5522998313480'>
               <FontAwesomeIcon icon={faWhatsapp} size='xl' style={{ color: 'white' }}></FontAwesomeIcon>
             </Nav.Link>
 
@@ -109,11 +119,5 @@ const Navbarr = () => {
         </nav>
       </div>
     </nav>
-  );
-};
-
-export default function Header() {
-  return (
-    <Navbarr />
   )
 }
