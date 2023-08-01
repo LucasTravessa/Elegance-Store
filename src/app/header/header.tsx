@@ -15,6 +15,7 @@ export default function Header(props: any) {
   const [status, setStatus] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
 
+  //navbar scroll hidden
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -36,10 +37,12 @@ export default function Header(props: any) {
     };
   }, [prevScrollPos]);
 
+  //header mobile button
   const handleClick = () => {
     setStatus(!status);
   }
 
+  //submenu hidden
   useEffect(() => {
     if (screenWidth > 992) {
       setStatus(false);
@@ -98,19 +101,19 @@ export default function Header(props: any) {
           <Navbar style={{ flexDirection: 'column', zIndex: '0' }} expand='lg' className='bgTherd rounded-bottom'>
             <Container style={{ flexDirection: 'column' }} className={styles.container}>
               <Nav style={{ flexDirection: 'column' }}>
-                <Nav.Link className={styles.text}>Home</Nav.Link>
-                <Nav.Link className={styles.text}>Fotos</Nav.Link>
-                <Nav.Link className={styles.text}>Informations</Nav.Link>
+                <Nav.Link className={styles.text} onClick={()=> scrollDown(props.home)}>Início</Nav.Link>
+                <Nav.Link className={styles.text} onClick={()=> scrollDown(props.fotos)}>Fotos</Nav.Link>
+                <Nav.Link className={styles.text} onClick={()=> scrollDown(props.info)}>Informações</Nav.Link>
               </Nav>
 
               <Nav className={styles.sociais_media_icons}>
-                <Nav.Link >
+                <Nav.Link href='https://www.instagram.com/elegance.rommanel/'>
                   <FontAwesomeIcon icon={faInstagram} size='xl' style={{ color: 'white', paddingRight: '15px' }}></FontAwesomeIcon>
                 </Nav.Link>
-                <Nav.Link >
+                <Nav.Link href='https://www.facebook.com/elegancerommaneleprata/'>
                   <FontAwesomeIcon icon={faFacebook} size='xl' style={{ color: 'white', paddingRight: '15px' }}></FontAwesomeIcon>
                 </Nav.Link>
-                <Nav.Link >
+                <Nav.Link href='https://api.whatsapp.com/send?phone=5522998313480'>
                   <FontAwesomeIcon icon={faWhatsapp} size='xl' style={{ color: 'white' }}></FontAwesomeIcon>
                 </Nav.Link>
               </Nav>
