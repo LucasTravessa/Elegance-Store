@@ -4,17 +4,26 @@
 
 .cards{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    margin: 0px 100px 0px 100px;
 }
 
 .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: #5B5B5B;
     border-color: white;
-    width: 25%;
+    width: 100%;
+    height: auto;
     color: white;
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 16px;
+}
+
+#text {
+    font-size: 16px;
 }
 
 .title {
@@ -64,7 +73,7 @@
         height: 100%;
     }
     #text {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .cards {
