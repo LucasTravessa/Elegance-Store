@@ -22,7 +22,7 @@ const Map: React.FC = () => {
 
   return (
     <GoogleMap
-      mapContainerStyle={{ width: '100%', height: '500px' }}
+      mapContainerStyle={{ width: '100%', height: '500px', borderRadius: '5px' }}
       center={center}
       zoom={zoom}
     >

@@ -12,6 +12,7 @@
     max-height: 70vh;
     min-height: 70vh;
     height: 70vh;
+    border:none
 }
 
 .card_right {
@@ -20,7 +21,9 @@
 }
 
 .card_body_text {
-    text-align: justify;
+    font-size: large;
+    color: white;
+    text-align: center;
 }
 
 @media(max-width: 766px) {
