@@ -69,7 +69,7 @@ export default function Header(props: any) {
           </Nav>
           <Navbar.Brand
             href="#home"
-            style={{ color: 'white' }}
+            style={{ color: 'white', fontSize: '20px' }}
           >
             Elegance
           </Navbar.Brand>
