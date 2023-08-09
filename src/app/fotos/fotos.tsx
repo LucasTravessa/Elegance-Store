@@ -17,14 +17,14 @@ export default function Fotos() {
     <div className="bgPrimary">
 
       <Container className="d-none d-lg-block p-5 bgPrimary">
-        <Row>
-        <Col className="d-flex justify-content-center pb-3">
+        <Row className="d-flex flex-lg-column flex-xl-row">
+        <Col className="d-flex justify-content-center pt-lg-5">
             <InstagramEmbed url="https://www.instagram.com/p/CvSpMufL9Ka/" width={328} height={656} />
           </Col>
-          <Col className="d-flex justify-content-center pb-3">
+          <Col className="d-flex justify-content-center pt-lg-5">
             <InstagramEmbed url="https://www.instagram.com/p/CvQXcGsuGDs/" width={328} height={656} />
           </Col>
-          <Col className="d-flex justify-content-center">
+          <Col className="d-flex justify-content-center pt-lg-5">
             <InstagramEmbed url="https://www.instagram.com/p/CvNxnRrO_m_/" width={328} height={656} />
           </Col>
         </Row>

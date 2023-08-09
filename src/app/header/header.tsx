@@ -44,7 +44,7 @@ export default function Header(props: any) {
 
   //submenu hidden
   useEffect(() => {
-    if (screenWidth > 992) {
+    if (screenWidth > 768) {
       setStatus(false);
     }
   }, [screenWidth]);
@@ -60,7 +60,7 @@ export default function Header(props: any) {
 
   return (
     <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`} >
-      <Navbar style={{ zIndex: '1' }} expand='lg' className='bgTherd' >
+      <Navbar style={{ zIndex: '1' }} className='bgTherd' >
         <Container>
           <Nav>
             <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.home)}>Início</Nav.Link>
@@ -96,7 +96,7 @@ export default function Header(props: any) {
       </Navbar>
 
       {/* Submenu */}
-      <div className={`${screenWidth <= 992 ? styles.nav_visible : styles.nav_hidden2}`}>
+      <div className={`${screenWidth <= 768 ? styles.nav_visible : styles.nav_hidden2}`}>
         <nav className={`${status ? styles.nav_visible : styles.nav_hidden}`} id={styles.nav2}>
           <Navbar style={{ flexDirection: 'column', zIndex: '0' }} expand='lg' className='bgTherd rounded-bottom'>
             <Container style={{ flexDirection: 'column' }} className={styles.container}>
