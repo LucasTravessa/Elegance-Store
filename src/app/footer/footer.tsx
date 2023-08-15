@@ -2,9 +2,11 @@ import styles from'./footer.module.css';
 
 
 export default function Footer() {
+    //! Solucionar por que a div do texto não está pegando o bg certo.
+
     return (
         <div className="z-1 p-1 bgTherd" id={styles.footer}>
-
+            
             <div className='m-0 p-0'>
 
                 <div className={styles.cards}>

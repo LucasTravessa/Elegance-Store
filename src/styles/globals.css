@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Lobster+Two&display=swap');
 
 *{
   font-family: 'Lobster Two', cursive;
 }
 
-.bgPrimary{
-    background-color: #D6D6D6;
+.bgPrimary {
+    background-color: #D6D2BF;
 }
-.bgTherd{
-    background-color: #5B5B5B;
+
+.bgSecundary {
+    background-color: #9A9586;
+}
+.bgTherd {
+    background-color: #29291C;
+}
+
+.bgButton {
+  background-color: #555038;
 }
