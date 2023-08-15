@@ -6,6 +6,7 @@ import Footer from '@/app/footer/footer';
 import Info from '@/app/information/information';
 import ScrollToTop from '@/app/modules/scroolToTop';
 import { useRef } from 'react';
+import Description from '@/app/description/description';
 
 
 export default function Main() {
@@ -24,6 +25,7 @@ export default function Main() {
         <div ref={fotos}>
           <Fotos />
         </div>
+      <Description/>
         <div ref={info}>
           <Info />
         </div>

@@ -58,6 +58,7 @@ export default function Header(props: any) {
     });
   };
 
+  //!alterar bg do card do botão na versão mobile.
   return (
     <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`} >
       <Navbar style={{ zIndex: '1' }} className='bgTherd' >
