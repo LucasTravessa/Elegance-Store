@@ -1,6 +1,9 @@
+import Image from "next/image";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import styles  from "./fotos.module.css"
+import Cardleft from "./assets/Cardleft.jpg"
+import Cardcenter from "./assets/Cardcenter.jpg"
+import Cardright from "./assets/Cardright.jpg"
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { InstagramEmbed } from 'react-social-media-embed';
@@ -16,19 +19,39 @@ export default function Fotos() {
   return (
     <div className="bgPrimary">
 
-      <Container className="d-none d-lg-block p-5 bgPrimary">
-        <Row className="d-flex flex-lg-column flex-xl-row">
-        <Col className="d-flex justify-content-center pt-lg-5">
-            <InstagramEmbed url="https://www.instagram.com/p/CvSpMufL9Ka/" width={328} height={656} />
-          </Col>
-          <Col className="d-flex justify-content-center pt-lg-5">
-            <InstagramEmbed url="https://www.instagram.com/p/CvQXcGsuGDs/" width={328} height={656} />
-          </Col>
-          <Col className="d-flex justify-content-center pt-lg-5">
-            <InstagramEmbed url="https://www.instagram.com/p/CvNxnRrO_m_/" width={328} height={656} />
-          </Col>
-        </Row>
-      </Container>
+      <div className={`d-flex flex-row justify-content-around ${styles.cards}`}>
+
+        {/* Left */}
+        <div className={`bgSecundary d-flex flex-column justify-content-center ${styles.card}`}>
+          <Image src={Cardleft} alt="Cardleft" className={`mb-4 ${styles.img}`}/>
+          <div className={`${styles.text}`}>
+            <p>
+              Os melhores brincos de prata
+            </p>
+          </div>
+        </div>
+
+        {/* Center */}
+        <div className={`bgSecundary d-flex flex-column justify-content-center ${styles.card}`}>
+          <Image src={Cardcenter} alt="Cardleft" className={`mb-4 ${styles.img}`}/>
+          <div className={`${styles.text}`}>
+            <p>
+              Os melhores colares de ouro 
+            </p>
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className={`bgSecundary  d-flex flex-column justify-content-center ${styles.card}`}>
+          <Image src={Cardright} alt="Cardleft" className={`mb-4 ${styles.img}`}/>
+          <div className={`${styles.text}`}>
+            <p>
+              As melhores pulceiras de ouro
+            </p>
+          </div>
+        </div>
+
+      </div>
 
       {/* Mobile carrousel */}
       <Container className="d-lg-none d-flex justify-content-center">
