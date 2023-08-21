@@ -35,3 +35,33 @@
     color: white;
     font-size: 21px;
 }
+
+@media(max-width: 977px) {
+    .text {
+        padding-top: 0.5rem;
+    }
+
+    .title {
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media(max-width: 839px) {
+    .text {
+        padding-top: 0rem;
+    }
+
+    .title {
+        padding-bottom: 0.25rem;
+    }
+
+    .card {
+        height: 500px;
+    }
+}
+
+@media(max-width: 705px) {
+    .text {
+        font-size: max(14px, 3vw);
+    }
+}
