@@ -64,13 +64,18 @@ export default function Header(props: any) {
       <Navbar style={{ zIndex: '1' }} className='bgTherd' >
         <Container>
           <Nav>
+            <Card className={styles.card}>
+              <Nav.Link className={styles.button}>
+                <FontAwesomeIcon onClick={handleClick} icon={faBars} size='xl'></FontAwesomeIcon>
+              </Nav.Link>
+            </Card>
             <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.home)}>Início</Nav.Link>
             <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.fotos)}>Fotos</Nav.Link>
             <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.info)}>Informações</Nav.Link>
           </Nav>
           <Navbar.Brand
             href="#home"
-            style={{ color: 'white', fontSize: '20px' }}
+            style={{ color: 'white', fontSize: '20px'}}
           >
             Elegance
           </Navbar.Brand>
@@ -87,11 +92,7 @@ export default function Header(props: any) {
               <FontAwesomeIcon icon={faWhatsapp} size='xl' style={{ color: 'white' }}></FontAwesomeIcon>
             </Nav.Link>
 
-            <Card className={styles.card}>
-              <Nav.Link className={styles.button}>
-                <FontAwesomeIcon onClick={handleClick} icon={faBars} size='xl'></FontAwesomeIcon>
-              </Nav.Link>
-            </Card>
+          
           </Nav>
         </Container>
       </Navbar>
@@ -99,9 +100,9 @@ export default function Header(props: any) {
       {/* Submenu */}
       <div className={`${screenWidth <= 768 ? styles.nav_visible : styles.nav_hidden2}`}>
         <nav className={`${status ? styles.nav_visible : styles.nav_hidden}`} id={styles.nav2}>
-          <Navbar style={{ flexDirection: 'column', zIndex: '0' }} expand='lg' className='bgTherd rounded-bottom'>
+          <Navbar style={{ flexDirection: 'column', zIndex: '0' , width: '100vw'}} expand='lg' className='bgTherd rounded-bottom'>
             <Container style={{ flexDirection: 'column' }} className={styles.container}>
-              <Nav style={{ flexDirection: 'column' }}>
+              <Nav style={{ flexDirection: 'column', textAlign: 'center'}}>
                 <Nav.Link className={styles.text} onClick={()=> scrollDown(props.home)}>Início</Nav.Link>
                 <Nav.Link className={styles.text} onClick={()=> scrollDown(props.fotos)}>Fotos</Nav.Link>
                 <Nav.Link className={styles.text} onClick={()=> scrollDown(props.info)}>Informações</Nav.Link>
@@ -109,10 +110,10 @@ export default function Header(props: any) {
 
               <Nav className={styles.sociais_media_icons}>
                 <Nav.Link href='https://www.instagram.com/elegance.rommanel/'>
-                  <FontAwesomeIcon icon={faInstagram} size='xl' style={{ color: 'white', paddingRight: '15px' }}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faInstagram} size='xl' style={{ color: 'white', paddingRight: '30px' }}></FontAwesomeIcon>
                 </Nav.Link>
                 <Nav.Link href='https://www.facebook.com/elegancerommaneleprata/'>
-                  <FontAwesomeIcon icon={faFacebook} size='xl' style={{ color: 'white', paddingRight: '15px' }}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faFacebook} size='xl' style={{ color: 'white', paddingRight: '30px' }}></FontAwesomeIcon>
                 </Nav.Link>
                 <Nav.Link href='https://api.whatsapp.com/send?phone=5522998313480'>
                   <FontAwesomeIcon icon={faWhatsapp} size='xl' style={{ color: 'white' }}></FontAwesomeIcon>
