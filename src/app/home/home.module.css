@@ -41,3 +41,32 @@
 .buttomText {
     margin-top: 8px;
 }
+
+@media(max-width: 965px) {
+    .text {
+        font-size: 18px;
+        width: 60%;
+    }
+}
+
+@media(max-width: 768px) {
+    .buttom {
+        margin-top: 0rem;
+    }
+
+    .text {
+        width: 80%;
+    }
+}
+
+@media(max-width: 490px) {
+    .text {
+        font-size: max(14px, 3.8vw);
+        margin-left: 2rem;
+    }
+
+    .buttom {
+        margin-left: 2rem;
+        width: 70vw;
+    }
+}
