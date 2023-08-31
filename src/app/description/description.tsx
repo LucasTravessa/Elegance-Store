@@ -3,7 +3,7 @@ import styles from './description.module.css';
 export default function Description() {
     return(
         <div className={`bgPrimary ${styles.cardFather}`}>
-            <div className={`bgSecundary ${styles.card}`}>
+            <div className={`bgButton ${styles.card}`}>
                 <div className={`${styles.title}`}>
                     <h1>Sobre os nossos produtos</h1>
                 </div>
