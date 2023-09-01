@@ -6,17 +6,26 @@
 .container {
     width: 100%;
     height: 500px;
-    background-image: url(./assets/Background.jpg);
+}
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 55%;
+    background-image: url('./assets/Teste.jpg');
     background-size: cover;
 }
 
 .text {
     font-family: 'Forum', cursive;
-    width: 45%;
+    width: 80%;
     text-align: justify;
-    color: black;
+    text-transform: capitalize;
+    color: white;
     margin-left: 5rem;
-    font-size: 21px;
+    font-size: 19px;
 }
 
 .buttom {
@@ -24,11 +33,10 @@
     color: white;
     width: 300px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 50px;
     font-family: 'Forum', cursive;
     align-items: center;
     transition: 0.3s;
-    margin-top: 20rem;
     margin-left: 5rem;
 }
 
