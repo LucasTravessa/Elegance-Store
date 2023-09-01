@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <div className={`bgPrimary mw-100 pt-5 ${styles.containerFather}`}>
 
-        <div className={`pt-5 d-flex flex-row ${styles.container}`}>
+        <div className={`pt-4 d-flex flex-row ${styles.container}`}>
 
           <div className={`${styles.left}`}>
 
