@@ -19,34 +19,34 @@ export default function Fotos() {
   return (
     <div className="bgPrimary">
 
-      <div className={`d-flex flex-row justify-content-around ${styles.cards}`}>
+      <div className={`d-none d-lg-flex flex-row justify-content-around ${styles.cards}`}>
 
         {/* Left */}
         <div className={`bgSecundary d-flex flex-column justify-content-center ${styles.card}`}>
           <Image src={Cardleft} alt="Cardleft" className={`mb-4 ${styles.img}`}/>
           <div className={`${styles.text}`}>
             <p>
-              Os melhores brincos de prata
+              Dê um toque de elegância ao seu visual com nossos Brincos
             </p>
           </div>
         </div>
 
         {/* Center */}
         <div className={`bgSecundary d-flex flex-column justify-content-center ${styles.card}`}>
-          <Image src={Cardcenter} alt="Cardleft" className={`mb-4 ${styles.img}`}/>
+          <Image src={Cardcenter} alt="Cardcenter" className={`mb-4 ${styles.img}`}/>
           <div className={`${styles.text}`}>
             <p>
-              Os melhores colares de ouro 
+              Adorne seu estilo com os nossos Colares 
             </p>
           </div>
         </div>
 
         {/* Right */}
         <div className={`bgSecundary  d-flex flex-column justify-content-center ${styles.card}`}>
-          <Image src={Cardright} alt="Cardleft" className={`mb-4 ${styles.img}`}/>
+          <Image src={Cardright} alt="Cardright" className={`mb-4 ${styles.img}`}/>
           <div className={`${styles.text}`}>
             <p>
-              As melhores pulceiras de ouro
+              Eleve seu estilo com as nossas Pulseiras
             </p>
           </div>
         </div>
@@ -57,13 +57,34 @@ export default function Fotos() {
       <Container className="d-lg-none d-flex justify-content-center">
         <Carousel slide={false} activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item>
-            <InstagramEmbed url="https://www.instagram.com/p/CvSpMufL9Ka/" width={328} height={656} />
+            <div className={`bgSecundary d-flex flex-column justify-content-center ${styles.card}`}>
+              <Image src={Cardleft} alt="Cardleft" className={`mb-4 ${styles.img}`}/>
+              <div className={`${styles.text}`}>
+                <p>
+                 Dê um toque de elegância ao seu visual com nossos Brincos
+                </p>
+              </div>
+            </div>
           </Carousel.Item>
           <Carousel.Item>
-            <InstagramEmbed url="https://www.instagram.com/p/CvQXcGsuGDs/" width={328} height={656} /> 
+            <div className={`bgSecundary d-flex flex-column justify-content-center ${styles.card}`}>
+              <Image src={Cardcenter} alt="Cardcenter" className={`mb-4 ${styles.img}`}/>
+              <div className={`${styles.text}`}>
+                <p>
+                  Adorne seu estilo com os nossos Colares 
+                </p>
+             </div>
+            </div>
           </Carousel.Item>
           <Carousel.Item>
-            <InstagramEmbed url="https://www.instagram.com/p/CvNxnRrO_m_/" width={328} height={656} />
+            <div className={`bgSecundary  d-flex flex-column justify-content-center ${styles.card}`}>
+              <Image src={Cardright} alt="Cardright" className={`mb-4 ${styles.img}`}/>
+              <div className={`${styles.text}`}>
+                <p>
+                  Eleve seu estilo com as nossas Pulseiras
+                </p>
+              </div>
+           </div>
           </Carousel.Item>
         </Carousel>
       </Container>
