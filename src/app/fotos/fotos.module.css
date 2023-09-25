@@ -24,4 +24,17 @@
 .text {
     font-family: 'Lobster Two', cursive;
     color: white;
+    width: 75%;
+    text-align: center;
+}
+
+@media(max-width: 991px) {
+    .card{
+        width: 328px; 
+        height: 500px;
+        margin-bottom: 40px; 
+    }
+    .card:hover {
+        transform: none;
+    }
 }

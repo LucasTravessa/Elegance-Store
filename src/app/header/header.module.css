@@ -23,6 +23,21 @@
 
 .nav {
   color: white;
+  list-style: none;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.nav:hover {
+  text-decoration: underline;
+}
+
+.img {
+  transition: 0.3s;
+}
+
+.img:hover {
+  transform: scale(1.06);
 }
 
 .nav_visible, .nav_hidden {

@@ -63,19 +63,19 @@ export default function Header(props: any) {
     <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`} >
       <Navbar style={{ zIndex: '1' }} className='bgTherd' >
         <Container>
-          <Nav>
+          <nav className='d-flex flex-row'>
             <Card className={styles.card}>
               <Nav.Link className={styles.button}>
                 <FontAwesomeIcon onClick={handleClick} icon={faBars} size='xl'></FontAwesomeIcon>
               </Nav.Link>
             </Card>
-            <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.home)}>Início</Nav.Link>
-            <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.fotos)}>Fotos</Nav.Link>
-            <Nav.Link className={styles.nav} onClick={()=> scrollDown(props.info)}>Informações</Nav.Link>
-          </Nav>
+            <li className={styles.nav} onClick={()=> scrollDown(props.home)}>Início</li>
+            <li className={styles.nav} onClick={()=> scrollDown(props.fotos)}>Fotos</li>
+            <li className={styles.nav} onClick={()=> scrollDown(props.info)}>Informações</li>
+          </nav>
           <Navbar.Brand
             href="#home"
-            style={{ color: 'white', fontSize: '20px'}}
+            style={{ color: 'white', fontSize: '25px'}}
           >
             Elegance
           </Navbar.Brand>
