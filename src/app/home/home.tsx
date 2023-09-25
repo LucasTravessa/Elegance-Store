@@ -31,6 +31,7 @@ export default function Home() {
               <h4 className={`${styles.buttomText}`}>ACESSE NOSSA LOJA</h4>
             </div>
           </div>
+          <div className={`${styles.right}`}></div>
         </div>
       </div>
     </>
