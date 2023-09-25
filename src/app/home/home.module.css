@@ -1,38 +1,117 @@
 .containerFather {
-    width: 100%;
-    padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 40px;
 }
 
 .container {
-    background-image: url(./assets/Background.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 500px;
-    opacity: 0.7;
-    display: flex;
-    flex-direction: row;
+  width: 80%;
+  height: 600px;
+  justify-content: space-around;
+}
+
+.left {
+  width: 30%;
+  border-radius: 8px;
+  background-color: #9a9586;
+}
+
+.right {
+  width: 30%;
+  height: auto;
+  background-image: url("./assets/portrait.jpg");
+  background-size: cover;
+  background-position: 56%;
+  border-radius: 8px;
 }
 
 .text {
-    font-family: 'Forum', cursive;
-    width: 45%;
+  font-family: "Forum", cursive;
+  width: 80%;
+  text-align: justify;
+  text-transform: capitalize;
+  color: white;
+  margin-left: 5rem;
+  font-size: 19px;
 }
 
 .buttom {
-    cursor: pointer;
-    color: white;
-    width: 300px;
-    height: 58px;
-    border-radius: 10px;
-    font-family: 'Forum', cursive;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3;
+  cursor: pointer;
+  color: white;
+  width: 300px;
+  height: 50px;
+  border-radius: 50px;
+  font-family: "Forum", cursive;
+  align-items: center;
+  transition: 0.3s;
+  margin-left: 5rem;
 }
 
 .buttom:hover {
-    color: black;
-    transform: scale(1.04);
-    background-color: #9A9586;
+  color: black;
+  transform: scale(1.04);
+  background-color: #9a9586;
+}
+
+.buttomText {
+  margin-top: 8px;
+}
+
+@media (max-width: 1162px) {
+  .right {
+    width: 50%;
+  }
+  .left {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1033px) {
+  .text {
+    margin-left: 3rem;
+    width: 85%;
+  }
+}
+
+@media (max-width: 972px) {
+  .text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 907px) {
+  .text {
+    margin-left: 1.5rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 870px) {
+  .right {
+    margin-left: 2rem;
+  }
+
+  .text {
+    width: 95%;
+  }
+}
+
+@media (max-width: 812px) {
+  .text {
+    font-size: max(14px, 2.2vw);
+  }
+
+  .buttom {
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 655px) {
+  .buttom {
+    width: 200px;
+  }
+}
+
+@media (meax-width: 459px) {
 }
