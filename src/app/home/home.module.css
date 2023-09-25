@@ -6,17 +6,26 @@
 .container {
     width: 100%;
     height: 500px;
-    background-image: url(./assets/Background.jpg);
+}
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 55%;
+    background-image: url('./assets/Teste.jpg');
     background-size: cover;
 }
 
 .text {
     font-family: 'Forum', cursive;
-    width: 45%;
+    width: 80%;
     text-align: justify;
-    color: black;
+    text-transform: capitalize;
+    color: white;
     margin-left: 5rem;
-    font-size: 21px;
+    font-size: 19px;
 }
 
 .buttom {
@@ -24,11 +33,10 @@
     color: white;
     width: 300px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 50px;
     font-family: 'Forum', cursive;
     align-items: center;
     transition: 0.3s;
-    margin-top: 20rem;
     margin-left: 5rem;
 }
 
@@ -42,31 +50,62 @@
     margin-top: 8px;
 }
 
-@media(max-width: 965px) {
+@media(max-width: 1162px) {
+    .right {
+        width: 50%;
+    }
+    .left {
+        width: 45%;
+    }
+}
+
+@media(max-width: 1033px) {
+    .text {
+        margin-left: 3rem;
+        width: 85%;
+    }
+}
+
+@media(max-width: 972px) {
     .text {
         font-size: 18px;
-        width: 60%;
+
     }
 }
 
-@media(max-width: 768px) {
-    .buttom {
-        margin-top: 0rem;
-    }
-
+@media(max-width: 907px) {
     .text {
-        width: 80%;
+        margin-left: 1.5rem;
+        width: 90%;
     }
 }
 
-@media(max-width: 490px) {
-    .text {
-        font-size: max(14px, 3.8vw);
+@media(max-width: 870px) {
+    .right {
         margin-left: 2rem;
     }
 
-    .buttom {
-        margin-left: 2rem;
-        width: 70vw;
+    .text {
+        width: 95%;
     }
+}
+
+@media(max-width: 812px) {
+    .text {
+        font-size: max(14px, 2.2vw);
+    }
+    
+    .buttom {
+        margin-left: 1.5rem;
+    }
+}
+
+@media(max-width: 655px) {
+    .buttom {
+        width: 200px;
+    }
+}
+
+@media(meax-width: 459px) {
+    
 }
