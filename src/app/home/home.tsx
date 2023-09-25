@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <div className={`bgPrimary mw-100 pt-5 ${styles.containerFather}`}>
-        <div className={`pt-4 d-flex flex-row ${styles.container}`}>
+        <div className={`pt-4 ${styles.container}`}>
           <div className={`${styles.left}`}>
             <div className={`${styles.text}`}>
               <p>
