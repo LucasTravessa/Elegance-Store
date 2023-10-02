@@ -1,17 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Forum&family=Lobster+Two&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Lobster+Two&display=swap");
 
 .bgPrimary {
-    background-color: #D6D2BF;
+  background-color: #d6d2bf;
 }
 
 .bgSecundary {
-    background-color: #9A9586;
+  background-color: #9a9586;
 }
 
 .bgTherd {
-    background-color: #29291C;
+  background-color: #29291c;
 }
 
 .bgButton {
   background-color: #555038;
+}
+
+.leaflet-container {
+  border-radius: 8px;
+  height: 600px;
 }
