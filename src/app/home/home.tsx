@@ -1,6 +1,13 @@
+import { useState } from "react";
 import styles from "./home.module.css";
+import Modal from "../modal/modal";
 
-export default function Home() {
+type Props = {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+};
+
+export default function Home({ isOpen, setIsOpen }: Props) {
   return (
     <>
       <div className={`bgPrimary mw-100 pt-5 ${styles.containerFather}`}>
@@ -27,6 +34,7 @@ export default function Home() {
 
             <div
               className={`bgButton d-flex justify-content-center ${styles.buttom}`}
+              onClick={() => setIsOpen(!isOpen)}
             >
               <h4 className={`${styles.buttomText}`}>ACESSE NOSSA LOJA</h4>
             </div>
