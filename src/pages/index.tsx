@@ -20,7 +20,7 @@ export default function Main() {
       <ScrollToTop />
       <Header home={home} fotos={fotos} info={info} />
       <div ref={home}>
-        <Home isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Home setIsOpen={setIsOpen} />
       </div>
       <div ref={fotos}>
         <Fotos />
