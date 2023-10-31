@@ -8,6 +8,7 @@ import ScrollToTop from "@/app/modules/scroolToTop";
 import { useRef, useState } from "react";
 import Description from "@/app/description/description";
 import ModalView from "@/app/modal/modal";
+import Head from "next/head";
 
 export default function Main() {
   const home = useRef(null);
@@ -17,6 +18,10 @@ export default function Main() {
 
   return (
     <>
+      <Head>
+        <title>Elegance Store</title>
+        <link rel="icon" href="/logo.jpg" sizes="<generated>" />
+      </Head>
       <ScrollToTop />
       <Header home={home} fotos={fotos} info={info} />
       <div ref={home}>
